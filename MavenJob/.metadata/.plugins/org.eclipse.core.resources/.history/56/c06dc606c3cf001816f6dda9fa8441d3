@@ -1,0 +1,9 @@
+package com.model;
+
+public class JobModel {
+	
+	public void register(int candidateID, String candidateName, String skills ,int Exp) {
+		
+	}
+
+}

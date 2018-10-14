@@ -1,0 +1,25 @@
+package com.model;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import Employee.Employee.Department;
+import Employee.Employee.Employee;
+
+public class JobModel {
+	
+	public void registerUser(int candidateID, String candidateName, String skills ,int Exp) {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("pu");
+		 EntityManager em=emf.createEntityManager();
+	        jopportal p=new jobportal();
+	        p.setCandidateId(candidateID);
+	        p.setCandidateName(candidateName);
+	        p.setSkills(skills);
+	        p.setExp(Exp);
+	        em.getTransaction().begin();
+	        em.persist(e);
+	        em.getTransaction().commit();
+	}
+
+}
